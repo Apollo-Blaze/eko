@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import ImeiReader from './barcodereader';
 import { useNavigate } from 'react-router-dom';
 
 const CustomerPage = () => {
@@ -25,7 +26,7 @@ const CustomerPage = () => {
     setIsSuccessful(true);
     event.preventDefault();
     try {
-      const response = await axios.post('http://172.17.103.55:3000/database-text', {
+      const response = await axios.post('http://192.168.64.26:3000/database-text', {
         inputString: t,
         userid: u,
         phone: p,
@@ -62,6 +63,7 @@ const CustomerPage = () => {
 
       <label className='customer'>Customer Input:</label>
       <br />
+      <ImeiReader />
 
       <p>Model Number:</p>
       <input type="text" onChange={handleText} placeholder='Enter the model'></input>
