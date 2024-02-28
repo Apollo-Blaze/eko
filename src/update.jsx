@@ -10,7 +10,7 @@ const UpdateDocument = () => {
 
     const handleUpdate = async () => {
         try {
-            const response = await axios.put('http://localhost:5173/updateDocument', {
+            const response = await axios.put('http://localhost:3000/updateDocument', {
                 collection: collection,
                 searchFieldValue: searchFieldValue,
                 updateFieldName: updateFieldName,
