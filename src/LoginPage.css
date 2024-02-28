@@ -1,6 +1,6 @@
 /* LoginPage.css */
 body {
-    background-color: #303030; /* Blackish gray page background */
+    background-color: #917291; /* Blackish gray page background */
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
@@ -11,13 +11,15 @@ body {
 }
 
 .login-container {
-    background-color: #303030; /* Blackish gray background */
+    background-color: rgb(90, 136, 175); /* Blackish gray background */
     color: #f6f4f4; /* Text color */
     padding: 20px;
     border-radius: 8px;
     width: 300px;
     margin: 100px auto;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
 }
 
 label {
@@ -53,5 +55,25 @@ button:hover {
     color: #ff3333; /* Red error message color */
     margin-top: 10px;
 }
-
+input[type="text"], input[type="password"] {
+    color: white; /* Set text color to white */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  
+  input[type="text"]:focus, input[type="password"]:focus {
+    outline: none;
+    border: 2px solid #5c0202; /* Change border color when input is focused */
+  }
+  input[type="text"]:focus {
+    color: white; /* Set text color to white when input is focused */
+  }
+  input[type="text"]:focus, input[type="text"]:not(:placeholder-shown) {
+    color: white; /* Set text color to white when input is focused or not empty */
+  }
+    
+  
 /* Add more styles as needed */

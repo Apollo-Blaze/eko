@@ -26,7 +26,7 @@ const CustomerPage = () => {
     setIsSuccessful(true);
     event.preventDefault();
     try {
-      const response = await axios.post('http://192.168.64.26:3000/database-text', {
+      const response = await axios.post('http://172.17.103.9:3000/database-text', {
         inputString: t,
         userid: u,
         phone: p,

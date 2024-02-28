@@ -1,72 +1,94 @@
-body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-
-    background-color: #3a3a3a; /* Dark grey background color */
-    color: white; /* Text color */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh; /* Full viewport height */
+.center-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 55vh;
+  background-color: rgb(90, 136, 175);
+  padding: 20px;
+  border-radius: 15px;
+  width: 50vh;
 }
 
-.center-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: #373636; /* Dark grey background color */
-    color: white; /* Text color */
-    padding: 20px; /* Add space on both sides of the box content */
-  }
+.center-container h1 {
+  color: black; /* Set text color to black */
+}
 
-  .role-container {
-    display: flex;
-    flex-direction: column;
-    gap: 25px; /* Adjust the gap between the boxes */
-  }
-  
-  .role-option {
-    border: 2px solid #fcf8f8;
-    padding: 20px; /* Adjust the padding to increase the length of the boxes */
-    width: 200px; /* Adjust the width to reduce the width of the boxes */
-    cursor: pointer;
-    
-  }
-  
-  .role-option.selected {
-    border-color: #72a7e0;
-    border-radius: 20px; /* Change the color to your desired selection highlight color */
-  }
-  
-  .btn {
-    margin-top: 20px;
-    color: #2e2d2f;          /* Change the text color to your preference */
-    padding: 10px 20px;    /* Adjust padding as needed */
-    border: none;            /* Remove border if desired */
-    border-radius: 5px;       /* Add border-radius for rounded corners */
-    cursor: pointer;
-    font-weight: bold;
-    background-color: #909899;
-  }
-  /* Add this to your existing CSS */
+.role-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
 
 .role-option {
-    display: flex;
-    align-items: center;
-    border: 2px solid #fcf8f8;
-    padding: 20px;
-    width: 200px;
-    cursor: pointer;
-}
-
-.role-option input {
-    margin-top:15px;
-    margin-right: 60px; /* Adjust the margin to separate the radio button from text */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 10px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  color: black; /* Set text color to black */
+  border: 2px solid transparent; /* Add transparent border initially */
 }
 
 .role-option.selected {
-    border-color: #72a7e0;
-    border-radius: 20px;
+  color: #000000;
+  background-color: #0000001f;
+  border-color: rgba(0, 0, 0, 0.27); /* Set border color to black when selected */
+  border-radius: 15px;
+  padding: 15px;
+  
 }
+
+
+.role-option input[type="radio"] {
+  display: none;
+}
+
+.vendorbtn, .customerbtn {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+  
+}
+
+.vendorbtn:hover, .customerbtn:hover {
+  background-color: #082355;
+  color: white;
+
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #007bff;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 20px;
+  border-radius: 15px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+.submit {
+  padding: 10px 20px;
+  border: none;
+  background-color: rgb(0, 0, 0); /* Change background color to pink */
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 20px;
+  border-radius: 15px;
+}
+
+.submit:hover {
+  background-color: #082355; /* Change hover background color to a lighter shade of pink */
+}
+

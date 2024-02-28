@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import "./StartPage.css"
+import { FaStore, FaUser } from 'react-icons/fa';
+
+
 
 function StartPage() {
   const [userType, setUserType] = useState('');
@@ -26,6 +29,7 @@ function StartPage() {
               value="vendor"
               onChange={() => setUserType('vendor')}
             />
+            <FaStore className="icon" />
           </div>
           Technician
         </label>
@@ -38,12 +42,13 @@ function StartPage() {
               value="customer"
               onChange={() => setUserType('customer')}
             />
+             <FaUser className="icon" />
           </div>
           General Public
         </label>
       </div>
 
-      <button onClick={handleLogin}>Choose</button>
+      <button className="submit" onClick={handleLogin}>Choose</button>
     </div>
   );
 }
