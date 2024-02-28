@@ -10,7 +10,7 @@ const DeleteDocument = () => {
   const handleDelete = async () => {
     try {
       console.log(userId);
-      const response = await axios.put('http://192.168.64.26:3000/delete', {
+      const response = await axios.put('http://localhost:3000/delete', {
         collection: collection,
         searchFieldValue: userId
 
