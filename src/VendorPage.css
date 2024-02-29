@@ -19,7 +19,7 @@ body {
   transition: .5s all; /* Blackish gray background for the container */
     padding: 20px;
     border-radius: 8px;
-    width: 160vh;;
+    width: 160vh;
     margin: 100px auto;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     margin-top: 100px;
