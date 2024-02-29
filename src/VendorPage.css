@@ -12,7 +12,7 @@ body {
     background-color: rgb(90, 136, 175); /* Blackish gray background for the container */
     padding: 20px;
     border-radius: 8px;
-    width: 400px;
+    width: 160vh;;
     margin: 100px auto;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     margin-top: 100px;
@@ -66,11 +66,13 @@ ul li {
     width: 600px;
     padding: 20px;
     text-align: center;
+    width: 160vh;;
 }
 /* Add more styles as needed */
 .bit1{
     background-color: #082355;
-    margin-left:40px
+    margin-left:390px;
+
 }
 
 .bit2{

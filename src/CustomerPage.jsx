@@ -9,6 +9,7 @@ import './CustomerPage.css'
 const CustomerPage = () => {
   const navigate = useNavigate(); // Correct way to use useNavigate hook
   const [t, setT] = useState('');
+  const [bid, setBid] = useState('');
   const [u, setu] = useState('');
   const [p, setp] = useState('');
   const [isSuccessful, setIsSuccessful] = useState(false);
@@ -46,6 +47,7 @@ const CustomerPage = () => {
         inputString: t,
         userid: u,
         phone: p,
+        bid:bid,
       });
       console.log('Backend response:', response.data);
     } catch (error) {
@@ -78,6 +80,9 @@ const CustomerPage = () => {
   const handleModel=()=>{
       navigate('/model');
   }
+  const handleb = () =>{
+    setBid(event.target.value);
+  }
 
   useEffect(() => {
     console.log('isSuccessful:', isSuccessful);
@@ -95,10 +100,11 @@ const CustomerPage = () => {
       <p className='or' >Upload photo of component</p>
       <p className="linker" onClick={handleModel}>Click here</p>
       <p className='nor'>or</p>
-      <p className='model'>Model Number:</p>
+      <p className='model'>Model:</p>
       <input type="text" onChange={handleText} placeholder='Enter the model'></input>
       <input type="text" onChange={handleu} placeholder='Enter username'></input>
       <input type="text" onChange={handlep} placeholder='Enter phone number'></input>
+      <input type="text" onChange={handleb} placeholder='Enter min bid amount'></input>
       <div className='buttons'>
       <button onClick={handleClick}>Submit</button>
       <button onClick={handleShow}>Show All</button>
