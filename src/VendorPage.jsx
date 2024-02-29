@@ -4,6 +4,9 @@ import './VendorPage.css'
 import { useNavigate } from 'react-router-dom';
 import YourComponent from './show';
 import MyComponent from './../../test/src/MyComponent';
+// YourComponent.jsx
+import { URL } from './config';
+
 
 const Search = () => {
   const [collectionName, setCollectionName] = useState('');
@@ -13,7 +16,7 @@ const Search = () => {
   const navigate=useNavigate()
   const handleRequest = async () => {
     try {
-      const response = await axios.post('http://172.17.103.9:3000/gfc', {
+      const response = await axios.post(`${URL}gfc`, {
         collectionName: collectionName,
         fieldName: fieldName,
         specName: specName

@@ -1,16 +1,19 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import './update.css';
+import { URL } from './config';
 
 const UpdateDocument = () => {
     const [searchFieldValue, setSearchFieldValue] = useState('');
     const [updateFieldName, setUpdateFieldName] = useState('');
     const [updateFieldValue, setUpdateFieldValue] = useState('');
     const [collection, setCollection] = useState('');
+// YourComponent.jsx
+
 
     const handleUpdate = async () => {
         try {
-            const response = await axios.put('http://172.17.103.9:3000/updateDocument', {
+            const response = await axios.put(`${URL}updateDocument`, {
                 collection: collection,
                 searchFieldValue: searchFieldValue,
                 updateFieldName: updateFieldName,

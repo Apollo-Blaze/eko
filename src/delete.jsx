@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import "./delete.css";
+import { URL } from './config';
 
 const DeleteDocument = () => {
   const [collection, setCollection] = useState('');
@@ -10,7 +11,7 @@ const DeleteDocument = () => {
   const handleDelete = async () => {
     try {
       console.log(userId);
-      const response = await axios.put('http://172.17.103.9:3000/delete', {
+      const response = await axios.put(`${URL}delete`, {
         collection: collection,
         searchFieldValue: userId
 

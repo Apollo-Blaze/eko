@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import MyComponent from '../../test/src/MyComponent';
 import './YourComponent.css';
+import { URL } from './config';
 
 const FeatureItem = ({ label, value }) => (
   <div>
@@ -16,7 +17,7 @@ const YourComponent = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get('http://172.17.103.9:3000/allDocuments');
+        const response = await axios.get(`${URL}allDocuments`);
         setData(response.data);
       } catch (error) {
         console.error('Error fetching data:', error);

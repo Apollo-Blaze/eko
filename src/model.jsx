@@ -6,6 +6,9 @@ import '@tensorflow/tfjs';
 import * as tmImage from '@teachablemachine/image';
 import "./mode.css"
 import { useNavigate } from 'react-router-dom';
+// YourComponent.jsx
+import { URL } from './config';
+
 
 
 const TeachableMachineComponent = () => {
@@ -63,7 +66,7 @@ const TeachableMachineComponent = () => {
     }
 
     try {
-      const response = await axios.put('http://172.17.103.9:3000/component-add', {
+      const response = await axios.put(`${URL}component-add`, {
         componentName: componentName,
         size: size,
         userid: userid,

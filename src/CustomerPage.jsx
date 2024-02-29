@@ -4,6 +4,8 @@ import ImeiReader from './barcodereader';
 import { useNavigate } from 'react-router-dom';
 import './CustomerPage.css'
 
+// YourComponent.jsx
+import { URL } from './config';
 
 
 const CustomerPage = () => {
@@ -42,7 +44,7 @@ const CustomerPage = () => {
     setIsSuccessful(true);
     event.preventDefault();
     try {
-      const response = await axios.post('http://172.17.103.9:3000/database-text', {
+      const response = await axios.post(`${URL}database-text`, {
 
         inputString: t,
         userid: u,

@@ -3,7 +3,7 @@
 body {
     background-color: #303030; /* Blackish gray page background */
     margin: 0;
-    padding: 0;
+    padding: 10px;
     font-family: Arial, sans-serif;
     color: #ffffff; /* Default text color */
 }
@@ -22,7 +22,7 @@ body {
     width: 160vh;;
     margin: 100px auto;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    margin-top: 100px;
+    margin-top: 400px;
     margin-bottom: 8px;
 }
 

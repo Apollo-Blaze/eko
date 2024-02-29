@@ -3,6 +3,7 @@ import { Container, Typography, TextField, Button, List, ListItem, ListItemText 
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import './bid.css';
+import { URL } from './config';
 
 const BiddingPage = () => {
   const { collectionName, userId } = useParams(); // Get the collection name and user ID from the route params
@@ -29,10 +30,10 @@ const BiddingPage = () => {
 
   const handleBidSubmit = async () => {
     console.log(collectionName);
-
+6666666
     try {
       console.log("hi")
-        const response = await axios.put('http://172.17.103.9:3000/biddinguser', {
+        const response = await axios.put(`${URL}biddinguser`, {
           collection: collectionName,
           phoneNumber: phoneNumber,
           amount: bidAmount, // Convert bidAmount to an integer

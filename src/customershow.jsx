@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import './YourComponent.css';
 import './custome.css'
+import {URL} from './config.js'
+
 
 const YourComponent = () => {
   const [results, setResults] = useState([]);
@@ -10,7 +12,7 @@ const YourComponent = () => {
 
   const handleShow = async () => {
     try {
-      const response = await axios.post('http://172.17.103.9:3000/gfc1', {
+      const response = await axios.post(`${URL}gfc1`, {
         collection: collection,
         userid: userid,
       });
