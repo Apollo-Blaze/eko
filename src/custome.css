@@ -1,17 +1,20 @@
 /* YourComponent.css */
 .showcont {
-    display: flex;
-    flex:2;
     font-family: Arial, sans-serif;
     padding: 20px;
-    background-color: rgb(90, 136, 175);
-    width: 90vh;
+    background-color: #282c34;
+  background: linear-gradient(0deg, rgba(40,44,52,1) 0%, rgba(17,0,32,.5) 100%);
+  box-shadow: 0 7px 20px 5px #00000088;
+  border-radius: .7rem;
+  backdrop-filter: blur(7px);
+  -webkit-backdrop-filter: blur(7px);
+  overflow: hidden;
+  transition: .5s all;
+  margin-top:80px;
+  align:center;
+  justify-content:center;
   }
-  
-  .showcont h1 {
-    margin-bottom: 20px;
-    font-size: 24px;
-  }
+
   
   .showcont input[type="text"] {
     margin-right: 10px;
@@ -27,7 +30,8 @@
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    margin-top: 10px;
+    margin-left: 450px;
+    align:center;
   }
   
   .showcont button.showcb:hover {
@@ -36,28 +40,45 @@
   
   /* custome.css */
   .phones {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
     margin-bottom: 20px;
     padding: 10px;
-    background-color: #f9f9f9;
+    height:190px;
+    background-color: #282c34;
+  background: linear-gradient(0deg, rgba(40,44,52,1) 0%, rgba(17,0,32,.5) 100%);
+  box-shadow: 0 7px 20px 5px #00000088;
+  border-radius: .7rem;
+  backdrop-filter: blur(7px);
+  -webkit-backdrop-filter: blur(7px);
+  transition: .5s all;
     border: 1px solid #ccc;
     border-radius: 4px;
+    overflow-x: auto; /* or overflow-x: scroll; */
+    white-space: nowrap;
+    margin-left: 17px;
+    border-color:rgb(0,0,0,0);
   }
   
   .phones p {
-    margin: 5px;
-    color: #4e504e;
+    margin: 5px ;
+    color: white;
   }
   
   .phones strong {
     font-weight: bold;
-    color: #4e504e;
+    color:white;
     margin-bottom: 5px;
   }
   .search-container{
-    flex:1;
+    background-color: #282c34;
+  background: linear-gradient(0deg, rgba(40,44,52,1) 0%, rgba(17,0,32,.5) 100%);
+  box-shadow: 0 7px 20px 5px #00000088;
+  border-radius: .7rem;
+  backdrop-filter: blur(7px);
+  -webkit-backdrop-filter: blur(7px);
+  overflow: hidden;
+  transition: .5s all;
+  margin-top:-20px;
   }
+
   
   

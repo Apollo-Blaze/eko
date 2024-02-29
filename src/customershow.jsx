@@ -24,6 +24,7 @@ const YourComponent = () => {
 
   return (
     <div className="showcont">
+        <h1>Search</h1>
       <div className="search-container">
         <input
           className='pmodel'

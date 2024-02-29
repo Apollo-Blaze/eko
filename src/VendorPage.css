@@ -9,7 +9,14 @@ body {
 }
 
 .search-container {
-    background-color: rgb(90, 136, 175); /* Blackish gray background for the container */
+    background-color: #282c34;
+  background: linear-gradient(0deg, rgba(40,44,52,1) 0%, rgba(17,0,32,.5) 100%);
+  box-shadow: 0 7px 20px 5px #00000088;
+  border-radius: .7rem;
+  backdrop-filter: blur(7px);
+  -webkit-backdrop-filter: blur(7px);
+  overflow: hidden;
+  transition: .5s all; /* Blackish gray background for the container */
     padding: 20px;
     border-radius: 8px;
     width: 160vh;;
@@ -94,7 +101,13 @@ ul li {
   .lis {
     align-items: left;
     justify-content: left;
-    background-color: #6582a1;
+    background-color: #282c34;
+    background: linear-gradient(0deg, rgba(40,44,52,1) 0%, rgba(17,0,32,.5) 100%);
+    box-shadow: 0 7px 20px 5px #00000088;
+    border-radius: .7rem;
+    backdrop-filter: blur(7px);
+    -webkit-backdrop-filter: blur(7px);
+    transition: .5s all;
     border-radius: 10px;
     margin-left: 18px;
     overflow-x: auto; /* or overflow-x: scroll; */
@@ -104,7 +117,13 @@ ul li {
   
   .result {
     padding-top: 25px;
-    background-color: #082355;
+    background-color: #282c34;
+  background: linear-gradient(0deg, rgba(40,44,52,1) 0%, rgba(17,0,32,.5) 100%);
+  box-shadow: 0 7px 20px 5px #00000088;
+  border-radius: .7rem;
+  backdrop-filter: blur(7px);
+  -webkit-backdrop-filter: blur(7px);
+  transition: .5s all;
     align-items: center;
     justify-content: center;
     margin-left: 10px;
