@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Container, Typography, TextField, Button, List, ListItem, ListItemText } from '@mui/material';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
+import './bid.css';
 
 const BiddingPage = () => {
   const { collectionName, userId } = useParams(); // Get the collection name and user ID from the route params
@@ -45,62 +46,60 @@ const BiddingPage = () => {
 };
 
   return (
-    <Container style={{ padding: '20px', borderRadius: '5px', background: 'cyan' }}>
-      <Typography variant="h4" gutterBottom>
-        Bidding Page
+    <div className="out" >
+      <Typography variant="h4" className="title" gutterBottom>
+        <strong>Bidding Page</strong>
       </Typography>
-      <Typography variant="h6" gutterBottom>
+
+      <Typography variant="h6" className="tit" gutterBottom>
         Collection Name: {collectionName}
       </Typography>
-      <Typography variant="h6" gutterBottom>
+      <Typography variant="h6" className="tit" gutterBottom>
         User ID: {userId}
       </Typography>
-      <Typography variant="h6" gutterBottom>
-        Highest Bid Amount: {highestBid}
-      </Typography>
-      <TextField
-        type="number"
-        label="Enter Bid Amount"
-        variant="outlined"
-        value={bidAmount}
-        onChange={handleBidChange}
-        fullWidth
-        sx={{ marginBottom: '10px' }}
-        inputProps={{
-          style: { color: 'white', borderColor: isValidBid ? 'green' : 'red' },
-        }}
-      />
-      <TextField
-        label="Enter Your Name"
-        variant="outlined"
-        value={name}
-        onChange={handleNameChange}
-        fullWidth
-        sx={{ marginBottom: '10px' }}
-        inputProps={{
-          style: { color: 'white' },
-        }}
-      />
-      <TextField
-        label="Enter Your Phone Number"
-        variant="outlined"
-        value={phoneNumber}
-        onChange={handlePhoneNumberChange}
-        fullWidth
-        sx={{ marginBottom: '10px' }}
-        inputProps={{
-          style: { color: 'white' },
-        }}
-      />
-      <Button variant="contained" color="primary" onClick={handleBidSubmit}>
+
+      <div className="textFieldContainer">
+        <TextField
+          type="number"
+          label="Enter Bid Amount"
+          variant="outlined"
+          value={bidAmount}
+          onChange={handleBidChange}
+          fullWidth
+          className="tex"
+          inputProps={{
+            style: { color: 'white', borderColor: isValidBid ? 'green' : 'red' },autoComplete: 'off',
+          }}
+        />
+        <br></br>
+        <input
+        type='text'
+          placeholder="Enter Your Name"
+          variant="outlined"
+          value={name}
+          onChange={handleNameChange}
+          className="te"
+        />
+        <br></br>
+        <input
+          placeholder="Enter Your Phone Number"
+          variant="outlined"
+          value={phoneNumber}
+          onChange={handlePhoneNumberChange}
+          className="te"
+        />
+        <br></br>
+      </div>
+
+      <Button variant="contained" color="primary" className="blabla" onClick={handleBidSubmit}>
         Submit Bid
       </Button>
 
       <List>
         {bids.map((bid, index) => (
-          <ListItem key={index}>
+          <ListItem key={index} className="listItem">
             <ListItemText
-              primary={`Bid Amount: ${bid.amount}`}
+              primary={`Bid Amount: ${bidAmount}`}
               secondary={`Time: ${bid.time}`}
             />
             <ListItemText
@@ -112,7 +111,7 @@ const BiddingPage = () => {
           </ListItem>
         ))}
       </List>
-    </Container>
+    </div>
   );
 };
 

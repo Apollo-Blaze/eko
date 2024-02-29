@@ -44,6 +44,7 @@ const Search = () => {
   
 
   return (
+    <>
     <div className='search-container'>
       <h1>Check Phone</h1>
       <div>
@@ -64,8 +65,9 @@ const Search = () => {
           <input type="text" value={specName} onChange={(e) => setSpecName(e.target.value)} />
         </label>
       </div>
-      <button onClick={handleRequest}>Search</button>
-      <button onClick={handleShow}>Show all</button>
+      <button className='bit1'onClick={handleRequest}>Search</button>
+      <button className='bit2'onClick={handleShow}>Show all</button>
+      </div>
       <div className='result'>
         <h2>Results:</h2>
         {/* <ul>
@@ -75,22 +77,24 @@ const Search = () => {
         </ul> */}
         <ul>
     {     results.map((result, index) => (
-        <li key={index}>
+        <li className="lis" key={index}>
             
-            <strong>Phone:</strong> {result.phone}<br />
-            <strong>Speaker:</strong> {result.speaker}<br />
-            <strong>Screen:</strong> {result.screen}<br />
-            <strong>Sensor:</strong> {result.sensor}<br />
-            <strong>Camera:</strong> {result.camera}<br />
-            <strong>Battery:</strong> {result.battery}<br />
-            <strong>Trigger Motor:</strong> {result.triggermotor}
+            <strong>Phone: {result.phone}</strong><br />
+            <strong>Speaker: {result.speaker}</strong><br />
+            <strong>Screen: {result.screen}</strong><br />
+            <strong>Sensor: {result.sensor}</strong><br />
+            <strong>Camera: {result.camera}</strong><br />
+            <strong>Battery: {result.battery}</strong><br />
+            <strong>Trigger Motor: {result.triggermotor}</strong><br/>
+            <strong>Bid Amount: {result.bidding}</strong>
+            <br></br>
             <button className="bid" onClick={() => handleBid(result.userid, collectionName)}>Bid</button>
 
         </li>
     ))}
 </ul>
       </div>
-    </div>
+    </>
   );
 };
 

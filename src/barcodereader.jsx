@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Quagga from 'quagga';
+import './barcode.css'
 
 const ImeiReader = () => {
     const [imei, setImei] = useState(null);
@@ -65,9 +66,10 @@ const ImeiReader = () => {
     };
 
     return (
-        <div>
+        <div className='barcon'>
             <input type="file" accept="image/*" onChange={handleFileUpload} />
-            {imei && <p>IMEI: {imei}</p>}
+            <br></br>
+            {imei && <p className="imei">IMEI: {imei}</p>}
             <div id="barcode-scanner" style={{ width: '100%', height: '200px' }}></div>
         </div>
     );

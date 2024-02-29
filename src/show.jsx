@@ -16,7 +16,7 @@ const YourComponent = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get('http://localhost:3000/allDocuments');
+        const response = await axios.get('http://172.17.103.9:3000/allDocuments');
         setData(response.data);
       } catch (error) {
         console.error('Error fetching data:', error);
@@ -27,13 +27,13 @@ const YourComponent = () => {
   }, []);
 
   return (
-    <div className="main">
-      <h1>All Documents</h1>
+    <div className="all">
+      <h1 className="heder">All Items</h1>
       {!showAll && (
         <ul>
           {data.map((item, index) => (
             <div className="card" key={index}>
-              <h2>Document {index + 1}</h2>
+              <h2>Product {index + 1}</h2>
               <p><strong>Collection:</strong> {item.collection}</p>
       <p><strong>ID:</strong> {item.id}</p>
       <p><strong>Trigger Motor:</strong> {item.triggermotor}</p>

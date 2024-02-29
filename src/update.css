@@ -1,19 +1,8 @@
-/* UpdateDocument.css */
-.container {
-    background-color: #333;
-    color: #ccc;
-    padding: 20px;
-    margin: 20px;
-    border-radius: 5px;
-}
-body{
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-}
+
 h2 {
     color: #fff;
     text-align: center;
+    margin-top: 28px;
 }
 
 label {
@@ -30,25 +19,31 @@ input[type="text"] {
     color: #333;
 }
 
-button {
+.update {
     padding: 10px 20px;
     margin-top: 10px;
-    background-color: #555;
     color: #fff;
     border: none;
-    border-radius: 3px;
+    border-radius: 10px;
     cursor: pointer;
+    margin-left: 92px;
 }
 
 button:hover {
     background-color: #666;
 }
-.container {
+.cont {
+    background-color: rgb(90, 136, 175);
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 180px;
+    margin-top: 0px;
     width: 400px;
+    height: 68vh;
+    border-radius: 15px;
+}
+h2{
+    margin-top: -15px;;
 }
 
 

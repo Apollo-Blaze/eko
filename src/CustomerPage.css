@@ -1,0 +1,76 @@
+.contain {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: rgb(90, 136, 175);
+    height: 90vh;
+  }
+  
+  h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .customer {
+    font-weight: bold;
+  }
+  
+  .bar {
+    margin-bottom: 10px;
+  }
+  
+  .or {
+    margin: 10px 0;
+    text-align: center;
+    font-weight: bold;
+    text-align: left;
+  }
+  .nor{
+    text-align: center;
+  }
+  .model {
+    font-weight: bold;
+    margin-top: 20px;
+  }
+  
+  input[type="text"],
+  input[type="file"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+  
+  .buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  .success {
+    color: green;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 10px;
+  }
+  .linker{
+    color:purple;
+    text-decoration: underline;
+    cursor: pointer;
+  }

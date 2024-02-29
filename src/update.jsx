@@ -10,7 +10,7 @@ const UpdateDocument = () => {
 
     const handleUpdate = async () => {
         try {
-            const response = await axios.put('http://localhost:3000/updateDocument', {
+            const response = await axios.put('http://172.17.103.9:3000/updateDocument', {
                 collection: collection,
                 searchFieldValue: searchFieldValue,
                 updateFieldName: updateFieldName,
@@ -23,7 +23,7 @@ const UpdateDocument = () => {
     };
 
     return (
-        <div className="container">
+        <div className="cont">
             <div className="form-container">
                 <h2>Update Document</h2>
                 <label>
@@ -42,7 +42,7 @@ const UpdateDocument = () => {
                     Status of the Component:
                     <input type="text" value={updateFieldValue} onChange={(e) => setUpdateFieldValue(e.target.value)} />
                 </label>
-                <button onClick={handleUpdate}>Update Document</button>
+                <button className="update" onClick={handleUpdate}>Update Document</button>
             </div>
         </div>
     );

@@ -10,7 +10,7 @@ const DeleteDocument = () => {
   const handleDelete = async () => {
     try {
       console.log(userId);
-      const response = await axios.put('http://localhost:3000/delete', {
+      const response = await axios.put('http://172.17.103.9:3000/delete', {
         collection: collection,
         searchFieldValue: userId
 
@@ -53,7 +53,7 @@ const DeleteDocument = () => {
         <input type="text" value={userId} onChange={(e) => setUserId(e.target.value)} />
       </label>
       <br />
-      <button onClick={handleDelete}>Delete Document</button>
+      <button className='del' onClick={handleDelete}>Delete Document</button>
       {message && <p>{message}</p>}
     </div>
   );

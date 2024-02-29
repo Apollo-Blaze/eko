@@ -8,6 +8,10 @@ import YourComponent from './show'; // Assuming YourComponent is correctly impor
 import DeleteDocument from './delete';
 import UpdateDocument from './update';
 import BiddingPage from './bid';
+import MyComponent from './customershow';
+import TeachableMachineComponent from './model';
+import UpdateComp from './updatecomp';
+
 
 function App() {
   return (
@@ -21,6 +25,9 @@ function App() {
         <Route path="/delete" element={<DeleteDocument />} />
         <Route path="/update" element={<UpdateDocument />} />
         <Route path="/bid/:collectionName/:userId" element={<BiddingPage />} />
+        <Route path="/showc" element={<MyComponent/>}></Route>
+        <Route path="/model" element={<TeachableMachineComponent/>}></Route>
+        <Route path="/updatec" element={<UpdateComp/>}></Route>
 </Routes>
     </Router> 
   );

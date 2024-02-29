@@ -2,6 +2,9 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import ImeiReader from './barcodereader';
 import { useNavigate } from 'react-router-dom';
+import './CustomerPage.css'
+
+
 
 const CustomerPage = () => {
   const navigate = useNavigate(); // Correct way to use useNavigate hook
@@ -21,16 +24,25 @@ const CustomerPage = () => {
   function handlep(event) {
     setp(event.target.value);
   }
+  // const handleShow = async () => {
+  //   try {
+  //     const response = await axios.post('http://172.17.103.9:3000/gfc', {
+  //       collectionName: collectionName,
+  //       userid: fieldName,
+  //     });
+
+  //     setResults(response.data.results);
+  //   } catch (error) {
+  //     console.error('Error:', error);
+  //   }
+  // };
 
   async function handleClick(event) {
     setIsSuccessful(true);
     event.preventDefault();
     try {
-<<<<<<< HEAD
       const response = await axios.post('http://172.17.103.9:3000/database-text', {
-=======
-      const response = await axios.post('http://localhost:3000/database-text', {
->>>>>>> 1715c6a15777a846ce14a212a4f73fa9806de870
+
         inputString: t,
         userid: u,
         phone: p,
@@ -38,6 +50,13 @@ const CustomerPage = () => {
       console.log('Backend response:', response.data);
     } catch (error) {
       console.error('Error sending data to backend:', error);
+    }
+  }
+  const handleShow = () => {
+    try {
+      navigate("/showc");
+    } catch (error) {
+      console.log(error);
     }
   }
 
@@ -56,27 +75,37 @@ const CustomerPage = () => {
       console.log(error);
     }
   }
+  const handleModel=()=>{
+      navigate('/model');
+  }
 
   useEffect(() => {
     console.log('isSuccessful:', isSuccessful);
   }, [isSuccessful]);
 
   return (
-    <div>
+    <div className="contain">
       <h1>Customer Page</h1>
 
-      <label className='customer'>Customer Input:</label>
-      <br />
-      <ImeiReader />
-
-      <p>Model Number:</p>
+      <label className='customer'>Upload IMEI code:</label>
+      <div className='bar'>
+      <ImeiReader className="imei" />
+      </div>
+      <p className='nor'>or</p>
+      <p className='or' >Upload photo of component</p>
+      <p className="linker" onClick={handleModel}>Click here</p>
+      <p className='nor'>or</p>
+      <p className='model'>Model Number:</p>
       <input type="text" onChange={handleText} placeholder='Enter the model'></input>
       <input type="text" onChange={handleu} placeholder='Enter username'></input>
       <input type="text" onChange={handlep} placeholder='Enter phone number'></input>
+      <div className='buttons'>
       <button onClick={handleClick}>Submit</button>
+      <button onClick={handleShow}>Show All</button>
       <button onClick={handleDelete}>Delete record</button>
       <button onClick={handleUpdate}>Update record</button>
-      {isSuccessful ? <p>Successful</p> : <p></p>}
+      </div>
+      {isSuccessful ? <p className='success'>Successful</p> : <p></p>}
     </div>
   );
 };
